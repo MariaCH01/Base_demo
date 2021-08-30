@@ -19,45 +19,75 @@ const popupp060100109 = new mapboxgl
     .setHTML(`
     <table>
         <tr>
-            <th>Nombre: </th> 
-            <td>predio</td>
+            <th>IDACTIVO: </th> 
+            <td>467528</td>
         </tr> 
         <tr> 
-            <th>predio: </th> 
-            <td>info</td>
+            <th>FMI: </th> 
+            <td>060100109</td>
         </tr>
+        <tr>
+            <th>TIPO ACTIVO: </th> 
+            <td>INMUEBLE</td>
+        </tr> 
         <tr> 
         <th>link: </th> 
-        <td><a href="https://www.w3schools.com" target="_blank">Visita para más info</a></td>
+        <td><a href="https://docs.google.com/spreadsheets/d/1JKT203HoJIPA18Lw70UiMi0pVG8bQmlM/edit?usp=sharing&ouid=117735801746855831514&rtpof=true&sd=true" target="_blank">Visita para más info</a></td>
     </tr>
 
     </table>`
-);
-
+    
+);  
 // create the popupp060100110
-const popupp060100110 = new mapboxgl.Popup({ offset: 25 }).setText(
-    `[IDACTIVO:	467528] 
+const popupp060100110 = new mapboxgl
+    .Popup()
+    .setHTML(`
+    <table>
+        <tr>
+            <th>IDACTIVO: </th> 
+            <td>467529</td>
+        </tr> 
+        <tr> 
+            <th>FMI: </th> 
+            <td>060100110</td>
+        </tr>
+        <tr>
+            <th>TIPO ACTIVO: </th> 
+            <td>INMUEBLE</td>
+        </tr> 
+        <tr> 
+        <th>link: </th> 
+        <td><a href="https://docs.google.com/spreadsheets/d/1JKT203HoJIPA18Lw70UiMi0pVG8bQmlM/edit?usp=sharing&ouid=117735801746855831514&rtpof=true&sd=true" target="_blank">Visita para más info</a></td>
+    </tr>
+
+    </table>`
     
-    [FORMA REGISTRO:	Matrix 1]     
-
-    [FOLIO DE MATRICULA:	060-100109]    
-
-    [NUMERO MATRIX:	20106261007402-002]
-`
 );
-
 // create the popupp060179656
-const popupp060179656 = new mapboxgl.Popup({ offset: 25 }).setText(
-    `[IDACTIVO:	467528] 
+const popupp060179656 = new mapboxgl
+    .Popup()
+    .setHTML(`
+    <table>
+        <tr>
+            <th>IDACTIVO: </th> 
+            <td>467530</td>
+        </tr> 
+        <tr> 
+            <th>FMI: </th> 
+            <td>060179656</td>
+        </tr>
+        <tr>
+            <th>TIPO ACTIVO: </th> 
+            <td>INMUEBLE</td>
+        </tr> 
+        <tr> 
+        <th>link: </th> 
+        <td><a href="https://docs.google.com/spreadsheets/d/1JKT203HoJIPA18Lw70UiMi0pVG8bQmlM/edit?usp=sharing&ouid=117735801746855831514&rtpof=true&sd=true" target="_blank">Visita para más info</a></td>
+    </tr>
+
+    </table>`
     
-    [FORMA REGISTRO:	Matrix 1]     
-
-    [FOLIO DE MATRICULA:	060-100109]    
-
-    [NUMERO MATRIX:	20106261007402-002]
-`
 );
-
 // create DOM element for the marker
 const elp060100109 = document.createElement('div');
 elp060100109.id = 'marker';

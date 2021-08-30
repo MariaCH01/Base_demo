@@ -8,7 +8,7 @@ const p060179656 = [-75.453613, 10.591283]; // Predio con folio 060-179656
 // Se crea el mapa
 const map = new mapboxgl.Map({
     container: 'map', // container ID
-    style: 'mapbox://styles/mherrerap18/cksydizil38gl1anq00i01xt6', // style URL
+    style: 'mapbox://styles/mherrerap18/cksz5cpbd9nd918nvmtwg30p5', // style URL
     center: p060100109,
     zoom: 13
 });

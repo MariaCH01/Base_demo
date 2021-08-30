@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASE DE DATOS DEMO PREDIAL</title>
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
+        type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Load the `mapbox-gl-geocoder` plugin. -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <!-- Promise polyfill script is required -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <!-- to use Mapbox GL Geocoder in IE 11. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+    <style>
+        #marker {
+            background-image: url('./Imagenes/icon2.jpeg');
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Navegación-->
+    <div class="topnav" id="myTopnav">
+        <a href="#introduccion" class="active">Introducción</a>
+        <a href="#generalidades">Generalidades</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#enlaces">Enlaces</a>
+    </div>
+
+    <!-- BASE DE DATOS DEMO PREDIAL -->
+    <h1 id="titulo">BASE DE DATOS DEMO PREDIAL</h1>
+    <h2 id="titulo">FINCA LAGOS DE ALTAMIRA</h2>
+
+    <!--Aquí va todo el HTML que necesites agregar-->
+    <h3>Información antes del mapa.</h3>
+    <!--Aquí va todo el HTML que necesites agregar-->
+
+    <div id='map' style='width:100%; height:600px;'></div>
+
+    <!--Aquí va todo el HTML que necesites agregar-->
+    <h3>Información de la página.</h3>
+    <!--Aquí va todo el HTML que necesites agregar-->
+
+    <!--El archivo js está aparte-->
+    <script src="app.js"></script>
+</body>
+
+</html>

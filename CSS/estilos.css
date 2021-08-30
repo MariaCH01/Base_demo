@@ -1,0 +1,65 @@
+body { 
+	margin: 5;
+	padding: 5;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	background-color: rgba(230, 230, 230, 0.767);
+}
+
+p {
+	text-align: justify;
+	font-size: 20px;
+}
+
+.row {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col {
+	float: left;
+  	width: 48%;
+  	padding: 10px;
+  	height: 300px;
+}
+
+#titulo {
+	color: #000000;
+	text-align: center;
+}
+
+/* Inicio Barra de navegación*/
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: #333;
+	overflow: hidden;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	display: block;
+	color: #ddd8ee;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+  
+  /* Add an active class to highlight the current page */
+.topnav a.active {
+	background-color: #2804aa;
+	color: white;
+}
+  
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+	display: none;
+}
+/* fin Barra de navegación*/

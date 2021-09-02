@@ -1,4 +1,4 @@
-// accessToken
+/// accessToken
 mapboxgl.accessToken = 'pk.eyJ1IjoibWhlcnJlcmFwMTgiLCJhIjoiY2txdm5zMmFqMDg5ZzJ1bnJtNXh3Y3gydCJ9.401fanfWTfdwR_qcXvLh-A';
 // Coordenadas
 const p060100109 = [-75.44522, 10.595222]; // Predio con folio 060-100109
@@ -9,8 +9,34 @@ const p060179656 = [-75.453613, 10.591283]; // Predio con folio 060-179656
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mherrerap18/cksz5cpbd9nd918nvmtwg30p5', // style URL
-    center: p060100109,
+    center: [-75.44522, 10.595222],
     zoom: 13
+});
+//mapbox://styles/mherrerap18/cksz5cpbd9nd918nvmtwg30p5
+const slider = document.getElementById('slider');
+const sliderValue = document.getElementById('slider-value');
+
+map.on('load', () => {
+    map.addSource('Cartagena de Indias', {
+        'type': 'raster',
+        'url': 'mapbox://mherrerap18.2tt3d32i' // aquí va tu raster con las coordenadas p060100109
+    });
+    map.addLayer({
+        'id': 'Cartagena de Indias',
+        'source': 'Cartagena de Indias',
+        'type': 'raster'
+    });
+
+    slider.addEventListener('input', (e) => {
+        map.setPaintProperty(
+            'Cartagena de Indias',
+            'raster-opacity',
+            parseInt(e.target.value, 10) / 100
+        );
+
+        // Value indicator
+        sliderValue.textContent = e.target.value + '%';
+    });
 });
 
 // create the popupp060100109
@@ -36,8 +62,8 @@ const popupp060100109 = new mapboxgl
     </tr>
 
     </table>`
-    
-);  
+
+    );
 // create the popupp060100110
 const popupp060100110 = new mapboxgl
     .Popup()
@@ -61,8 +87,8 @@ const popupp060100110 = new mapboxgl
     </tr>
 
     </table>`
-    
-);
+
+    );
 // create the popupp060179656
 const popupp060179656 = new mapboxgl
     .Popup()
@@ -86,8 +112,8 @@ const popupp060179656 = new mapboxgl
     </tr>
 
     </table>`
-    
-);
+
+    );
 // create DOM element for the marker
 const elp060100109 = document.createElement('div');
 elp060100109.id = 'marker';
@@ -131,12 +157,12 @@ map.addControl(new mapboxgl.FullscreenControl());
 // Add geolocate control to the map.
 map.addControl(
     new mapboxgl.GeolocateControl({
-    positionOptions: {
-    enableHighAccuracy: true
-    },
-    // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true,
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-    showUserHeading: true
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
     })
-    );
+);
